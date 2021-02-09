@@ -16,12 +16,12 @@ uint8 sonbitpares(uint16 word);
 
 int main()
 {
-    printf("Hello World\n");
+    printf("Hello World, I'm Dany!\n");
     printf("%d\n",variableentrada);
     printf("%d\n",createhammingcode(0));
 
 
-    printf("%d\n",sonbitpares(0xD));
+    printf("%d\n",sonbitpares(0xF));
 
     return 0;
 }
