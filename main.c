@@ -21,18 +21,18 @@ int main()
     printf("%d\n",createhammingcode(0));
 
 
-    printf("%d\n",sonbitpares(0xF));
+    printf("%d\n",sonbitpares(0xA));
 
     return 0;
 }
 
 uint16 createhammingcode(uint16 word){
-    uint16 resultado;
+    uint16 resultado = 0;
     uint16 codigosecuridad=0;
-    uint16 grupo1;
-    uint16 grupo2;
-    uint16 grupo3;
-    uint16 grupo4;
+    uint16 grupo1 = 0;
+    uint16 grupo2 = 0;
+    uint16 grupo3 = 0;
+    uint16 grupo4 = 0;
     grupo1 = (word &0x6D5);
     codigosecuridad = (sonbitpares(grupo1)<<11) + (sonbitpares(grupo2)<<12) +(sonbitpares(grupo3)<<13) + (sonbitpares(grupo4)<<14) +(sonbitpares(word)<<1)  ;
     resultado = word + codigosecuridad;
@@ -40,7 +40,7 @@ uint16 createhammingcode(uint16 word){
 }
 
 uint8 sonbitpares(uint16 word){
-    uint8 contador=0;
+    uint8 contador = 0;
     for(int i = 0; i < 16; i++){
         contador += ((word&(1<<i))>>i);
     }
