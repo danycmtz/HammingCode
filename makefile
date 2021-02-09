@@ -8,3 +8,11 @@ OBJ = main.o
 
 main: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
+
+.PHONY: run
+run:
+	 ./main
+
+.PHONY: clean
+clean:
+	rm -f main main.o
