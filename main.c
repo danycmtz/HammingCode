@@ -17,6 +17,7 @@ uint8 sonbitpares(uint16 word);
 int main()
 {
     printf("Hello World, we're Olaf and Dany!\n");
+    printf("Add this!\n");
     printf("%d\n",variableentrada);
     printf("%d\n",createhammingcode(0));
 
